@@ -10,6 +10,7 @@
 #include <defines.h>
 #include <NodeValue.h>
 #include <Error.h>
+#include "keyMapper.h"
 
 
 using ObjectNode = std::map<std::string, Node>;
@@ -62,6 +63,7 @@ private:
     bool validateNodeType(InnerNodePtr, ErrorCode potentialError);
 
     std::unique_ptr<ObjectNode> root;
+    std::unique_ptr<KeyMapper> keyMapper;
     std::unique_ptr<Error> error;
 };
 
